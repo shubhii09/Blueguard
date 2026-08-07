@@ -132,17 +132,8 @@ function Home() {
         </div>
       </section>
 
-      {/* Products Section */}
-      <section className="w-full bg-blue-50">
-        <div className="w-[90%] md:w-[80%] mx-auto py-16 md:py-20">
-          <div className="text-center mb-14">
-            <span className="text-blue-600 font-semibold text-sm">
-              OUR PRODUCTS
-            </span>
-            <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-gray-900 mt-2">
-              Purifiers Built For Every Home
-            </h2>
-          </div>
+      
+        
 
     {/* Products Section */}
 <section className="w-full bg-blue-50">
@@ -234,8 +225,8 @@ function Home() {
     </div>
   </div>
 </section>
-        </div>
-      </section>
+
+ 
 
       {/* Why BlueGuard Section */}
       <section className="w-full bg-white">
