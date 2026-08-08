@@ -16,13 +16,14 @@ import ro10 from "../assets/images/Chimney-e1702964936222.webp";
 import ro11 from "../assets/images/Chimney-e1702964936222.webp";
 import ro12 from "../assets/images/Chimney2-e1702964902990.webp";
 
-
-// 
-
-
+export function priceToNumber(p) {
+  if (!p) return 0;
+  return parseInt(String(p).replace(/,/g, ""), 10) || 0;
+}
 
 export const domesticRO = [
   {
+    id: "dom-1",
     name: "BlueGuard Camry Black",
     tech: "RO + UV + UF + TDS + Alkaline",
     img: ro1,
@@ -32,9 +33,14 @@ export const domesticRO = [
     reviews: 1240,
     price: "13,500",
     originalPrice: "18,500",
+    numericPrice: 13500,
+    tankCapacity: "8L",
+    tdsLimit: "Up to 2000 ppm",
+    mounting: "Wall Mount",
     features: ["Active Copper Technology", "Smart LED Monitor", "8L Storage Tank"],
   },
   {
+    id: "dom-2",
     name: "BlueGuard Camry White",
     tech: "RO + UV + UF + TDS + Alkaline",
     img: ro2,
@@ -44,9 +50,14 @@ export const domesticRO = [
     reviews: 980,
     price: "12,500",
     originalPrice: "16,500",
+    numericPrice: 12500,
+    tankCapacity: "8L",
+    tdsLimit: "Up to 2000 ppm",
+    mounting: "Wall Mount",
     features: ["Modular White Aesthetics", "Active Copper Mineral Guard", "Clear Level Gauge"],
   },
   {
+    id: "dom-3",
     name: "BlueGuard Swift Plus",
     tech: "RO + UV + TDS + Alkaline",
     img: ro3,
@@ -56,9 +67,14 @@ export const domesticRO = [
     reviews: 1120,
     price: "13,500",
     originalPrice: "17,990",
+    numericPrice: 13500,
+    tankCapacity: "10L",
+    tdsLimit: "Up to 1500 ppm",
+    mounting: "Wall Mount / Table Top",
     features: ["High-Pressure Swift Pump", "Copper + Zinc Mineral Cartridge", "Zero Tasteless Water"],
   },
   {
+    id: "dom-4",
     name: "BlueGuard Grand Plus",
     tech: "RO + UV + TDS + Alkaline",
     img: ro4,
@@ -68,9 +84,14 @@ export const domesticRO = [
     reviews: 860,
     price: "12,500",
     originalPrice: "16,000",
+    numericPrice: 12500,
+    tankCapacity: "12L",
+    tdsLimit: "Up to 2000 ppm",
+    mounting: "Wall Mount",
     features: ["Space-Saving 12L Tank", "Alkaline Mineral Boost", "Easy Filter Change"],
   },
   {
+    id: "dom-5",
     name: "BlueGuard Pearl Plus",
     tech: "RO + UV + TDS + Alkaline",
     img: ro5,
@@ -80,9 +101,14 @@ export const domesticRO = [
     reviews: 640,
     price: "15,500",
     originalPrice: "19,500",
+    numericPrice: 15500,
+    tankCapacity: "10L",
+    tdsLimit: "Up to 2500 ppm",
+    mounting: "Wall Mount",
     features: ["Elegant Pearl Finish", "UV + UV Double Protection", "Auto Shut-Off"],
   },
   {
+    id: "dom-6",
     name: "BlueGuard Alfa Black",
     tech: "RO + UV + UF + TDS + Alkaline",
     img: ro6,
@@ -92,9 +118,14 @@ export const domesticRO = [
     reviews: 540,
     price: "12,500",
     originalPrice: "15,900",
+    numericPrice: 12500,
+    tankCapacity: "12L",
+    tdsLimit: "Up to 2000 ppm",
+    mounting: "Wall Mount",
     features: ["12L Large Tank", "UV + UF Combo", "Matte Black Body"],
   },
   {
+    id: "dom-7",
     name: "BlueGuard Nova Steel",
     tech: "RO + UV + UF + TDS",
     img: ro1,
@@ -104,9 +135,14 @@ export const domesticRO = [
     reviews: 410,
     price: "14,900",
     originalPrice: "19,900",
+    numericPrice: 14900,
+    tankCapacity: "10L",
+    tdsLimit: "Up to 2000 ppm",
+    mounting: "Wall Mount",
     features: ["Steel-Finish Panel", "7-Stage Purification", "Smart Auto Flush"],
   },
   {
+    id: "dom-8",
     name: "BlueGuard Aqua Mini",
     tech: "RO + UV",
     img: ro3,
@@ -116,9 +152,14 @@ export const domesticRO = [
     reviews: 320,
     price: "10,900",
     originalPrice: "13,900",
+    numericPrice: 10900,
+    tankCapacity: "6L",
+    tdsLimit: "Up to 1000 ppm",
+    mounting: "Wall Mount",
     features: ["Compact Wall-Mount Design", "RO + UV Purification", "6L Storage Tank"],
   },
   {
+    id: "dom-9",
     name: "BlueGuard Royale Copper",
     tech: "RO + UV + UF + Copper + Alkaline",
     img: ro5,
@@ -128,9 +169,14 @@ export const domesticRO = [
     reviews: 275,
     price: "16,900",
     originalPrice: "21,900",
+    numericPrice: 16900,
+    tankCapacity: "10L",
+    tdsLimit: "Up to 3000 ppm",
+    mounting: "Wall Mount",
     features: ["Ayurvedic Copper Charging", "9-Stage Purification", "10L Storage Tank"],
   },
   {
+    id: "dom-10",
     name: "BlueGuard Tez 15",
     tech: "RO + UV + TDS",
     img: ro6,
@@ -140,12 +186,17 @@ export const domesticRO = [
     reviews: 198,
     price: "11,900",
     originalPrice: "14,900",
+    numericPrice: 11900,
+    tankCapacity: "8L",
+    tdsLimit: "Up to 1500 ppm",
+    mounting: "Wall Mount",
     features: ["15 LPH Fast Purification", "Slim Wall-Mount Body", "Auto Shut-Off"],
   },
 ];
 
 export const commercialRO = [
   {
+    id: "com-1",
     name: "BlueGuard 25 LPH RO",
     img: ro7,
     tech: "RO + UV + TDS",
@@ -155,9 +206,14 @@ export const commercialRO = [
     reviews: 210,
     price: "18,900",
     originalPrice: "24,900",
+    numericPrice: 18900,
+    tankCapacity: "Commercial Heavy Duty",
+    tdsLimit: "Up to 3000 ppm",
+    mounting: "Free Standing / Floor",
     features: ["25 LPH Output", "Heavy-Duty Pump", "Auto Flush System"],
   },
   {
+    id: "com-2",
     name: "BlueGuard 50/150 LPH RO",
     img: ro8,
     tech: "RO + UV + TDS",
@@ -165,13 +221,19 @@ export const commercialRO = [
     badge: "Institutional Grade",
     rating: 4.6,
     reviews: 140,
+    price: "38,990",
+    numericPrice: 38990,
     prices: [
       { label: "50 LPH", value: "38,990" },
       { label: "150 LPH", value: "70,500" },
     ],
+    tankCapacity: "Commercial Heavy Duty",
+    tdsLimit: "Up to 3000 ppm",
+    mounting: "Free Standing / Floor",
     features: ["Dual Capacity Options", "Industrial Grade Membrane", "24x7 Continuous Use"],
   },
   {
+    id: "com-3",
     name: "BlueGuard 500/1000 LPH RO",
     img: ro9,
     tech: "RO + UV + TDS",
@@ -179,13 +241,19 @@ export const commercialRO = [
     badge: "Industrial Plant",
     rating: 4.8,
     reviews: 65,
+    price: "1,30,000",
+    numericPrice: 130000,
     prices: [
       { label: "500 LPH", value: "1,30,000" },
       { label: "1000 LPH", value: "1,95,000" },
     ],
+    tankCapacity: "Commercial Heavy Duty",
+    tdsLimit: "Up to 3000 ppm",
+    mounting: "Free Standing / Floor",
     features: ["Fully Automatic Control Panel", "Stainless Steel Frame", "Low Maintenance"],
   },
   {
+    id: "com-4",
     name: "BlueGuard 100 LPH RO",
     img: ro7,
     tech: "RO + UV + TDS",
@@ -195,9 +263,14 @@ export const commercialRO = [
     reviews: 90,
     price: "45,000",
     originalPrice: "55,000",
+    numericPrice: 45000,
+    tankCapacity: "Commercial Heavy Duty",
+    tdsLimit: "Up to 3000 ppm",
+    mounting: "Free Standing / Floor",
     features: ["100 LPH High Flow", "Commercial Grade Pump", "3-Year Warranty"],
   },
   {
+    id: "com-5",
     name: "BlueGuard 250 LPH RO",
     img: ro8,
     tech: "RO + UV + TDS",
@@ -207,12 +280,17 @@ export const commercialRO = [
     reviews: 54,
     price: "95,000",
     originalPrice: "1,15,000",
+    numericPrice: 95000,
+    tankCapacity: "Commercial Heavy Duty",
+    tdsLimit: "Up to 3000 ppm",
+    mounting: "Free Standing / Floor",
     features: ["250 LPH Output", "PLC Auto Control", "SS 304 Frame"],
   },
 ];
 
 export const chimneys = [
   {
+    id: "chim-1",
     name: "BlueGuard SC BK 60",
     tech: "Autoclean – Heat Auto Clean",
     img: ro10,
@@ -222,9 +300,14 @@ export const chimneys = [
     reviews: 320,
     price: "15,500",
     originalPrice: "19,900",
+    numericPrice: 15500,
+    tankCapacity: "N/A",
+    tdsLimit: "N/A",
+    mounting: "Wall Mounted Chimney",
     features: ["60cm Black Tempered Glass", "1200 m³/hr Suction", "Motion Sensor Touch Control"],
   },
   {
+    id: "chim-2",
     name: "BlueGuard Novio",
     tech: "Autoclean – Heat Auto Clean",
     img: ro11,
@@ -234,11 +317,16 @@ export const chimneys = [
     reviews: 260,
     price: "14,990",
     originalPrice: "18,990",
+    numericPrice: 14990,
+    tankCapacity: "N/A",
+    tdsLimit: "N/A",
+    mounting: "Wall Mounted Chimney",
     features: ["60cm / 90cm Width Options", "Filter-less, 1200 m³/hr", "Touch / Motion Control"],
   },
   {
+    id: "chim-3",
     name: "BlueGuard Feel 3D",
-    tech: "",
+    tech: "Baffle Filter",
     img: ro12,
     category: "Kitchen Chimney",
     badge: "Curved Glass",
@@ -246,9 +334,14 @@ export const chimneys = [
     reviews: 180,
     price: "12,450",
     originalPrice: "15,900",
+    numericPrice: 12450,
+    tankCapacity: "N/A",
+    tdsLimit: "N/A",
+    mounting: "Wall Mounted Chimney",
     features: ["Stainless Steel + Curved Glass", "1095 m³/hr Suction", "Baffle Filter"],
   },
   {
+    id: "chim-4",
     name: "BlueGuard Crown 90",
     tech: "Autoclean – Heat Auto Clean",
     img: ro10,
@@ -258,9 +351,14 @@ export const chimneys = [
     reviews: 140,
     price: "17,500",
     originalPrice: "21,900",
+    numericPrice: 17500,
+    tankCapacity: "N/A",
+    tdsLimit: "N/A",
+    mounting: "Wall Mounted Chimney",
     features: ["90cm Wide Body", "1400 m³/hr Suction", "Motion Sensor Touch Control"],
   },
   {
+    id: "chim-5",
     name: "BlueGuard Slimline 60",
     tech: "Autoclean – Heat Auto Clean",
     img: ro12,
@@ -270,29 +368,64 @@ export const chimneys = [
     reviews: 110,
     price: "13,900",
     originalPrice: "17,500",
+    numericPrice: 13900,
+    tankCapacity: "N/A",
+    tdsLimit: "N/A",
+    mounting: "Wall Mounted Chimney",
     features: ["Ultra-Slim Body", "1100 m³/hr Suction", "Push Button Control"],
   },
 ];
 
-// RO Parts & Accessories — "icon" picks which inline SVG illustration to show
-// (drawn by hand so the catalog always renders, with no dependency on any
-// external image files or icon-library version).
 export const roParts = [
-  { name: "Sediment Filter (Stage 1)", note: "Fits most RO models", price: "250", img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTrg-3le2pyeVhCTfznnSCM9S6y4siqGrWF5sTMFqnrBQ&s=10" },
-  { name: "Pre-Carbon Filter (Stage 2)", note: "Fits most RO models", price: "280", img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRNnBqHfCQNd7yoCiBb85fLMUIuLZ9PTjEfVNV88iSAoA&s=10" },
-  { name: "Post-Carbon Filter", note: "Fits most RO models", price: "320", img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ9MCd8b254ZAIQ7yme9pAXhMBCiYqfZYQ8lV7AmZIxPw&s=10" },
-  { name: "RO Membrane (80 GPD)", note: "Domestic purifiers", price: "1,450", img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQBQVig2OGxGEEL2yAOSIagBb1l-pXHVHDZyJqoy-TIog&s" },
-  { name: "RO Membrane (100 GPD)", note: "Domestic & light commercial", price: "1,650", img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQHHpwCYJuWHOShhv2mP8mwpfOsTiR_7-GVYVIpbPFyiw&s=10" },
-  { name: "SMPS Power Adapter", note: "Universal fit", price: "650", img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQIZpRH1g0snrcgq6yojwLziCK385VpvELYbWFt71NM2w&s" },
-  { name: "Booster Pump", note: "For low water pressure", price: "1,200", img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR1-DXM_M-fYFJnWCbLit6N3Y0--JGTSZfD2iY820nzAw&s=10" },
-  { name: "Solenoid Valve", note: "Fits most RO models", price: "350", img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQlnJO43ibw1_5uGxC7UZXsViqehvf3ttdqrLznLRv8aw&s" },
-  { name: "Float Valve", note: "Storage tank fitting", price: "180", img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRa3jU-8-QD4H4sD6WMY3EKWbxRqM9lDIS-MBM0g57bOQ&s=10" },
-  { name: "UV Lamp", note: "Standard 11W", price: "450", img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRBu06t57LDMZGa82wjh33wDrnclXG0N9kXdcw00lPN_w&s" },
-  { name: "Filter Housing (Set of 3)", note: "Universal fit", price: "600", img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTaAv2CTRtoIdkDB8lv11jzJEOGiIvJ637x9Q8PYkinNw&s" },
-  { name: "Annual Filter Kit", note: "All filters, 1-year supply", price: "1,999", img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT_TcAvGNfmJ6Lk8MN5u4YDKJ9efLftL_rLORqsYZvQcQ&s=10" },
-  { name: "TDS Controller Valve", note: "Adjustable mineral balance", price: "420", img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRs2lAdN0lxoYeipnMoBkYSsPH6LLWA4wW7x4auohhQvA&s" },
-  { name: "Inline Non-Return Valve", note: "Prevents backflow", price: "150", img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTe8fYfeD8jcVfJnbKnDJGvpvt5QIDZYCfMQsVuqZPbhg&s=10" },
+  { id: "part-1", name: "Sediment Filter (Stage 1)", note: "Fits most RO models", price: "250", numericPrice: 250, category: "RO Parts & Accessories", tech: "Filter", img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTrg-3le2pyeVhCTfznnSCM9S6y4siqGrWF5sTMFqnrBQ&s=10", features: ["10 Micron Filtration", "Removes Mud & Rust"] },
+  { id: "part-2", name: "Pre-Carbon Filter (Stage 2)", note: "Fits most RO models", price: "280", numericPrice: 280, category: "RO Parts & Accessories", tech: "Filter", img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRNnBqHfCQNd7yoCiBb85fLMUIuLZ9PTjEfVNV88iSAoA&s=10", features: ["Activated Charcoal", "Absorbs Chlorine & Odor"] },
+  { id: "part-3", name: "Post-Carbon Filter", note: "Fits most RO models", price: "320", numericPrice: 320, category: "RO Parts & Accessories", tech: "Filter", img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ9MCd8b254ZAIQ7yme9pAXhMBCiYqfZYQ8lV7AmZIxPw&s=10", features: ["Enhances Taste", "Final Stage Polishing"] },
+  { id: "part-4", name: "RO Membrane (80 GPD)", note: "Domestic purifiers", price: "1,450", numericPrice: 1450, category: "RO Parts & Accessories", tech: "RO", img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQBQVig2OGxGEEL2yAOSIagBb1l-pXHVHDZyJqoy-TIog&s", features: ["High Rejection Rate", "Durable Polymer Sheet"] },
+  { id: "part-5", name: "RO Membrane (100 GPD)", note: "Domestic & light commercial", price: "1,650", numericPrice: 1650, category: "RO Parts & Accessories", tech: "RO", img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQHHpwCYJuWHOShhv2mP8mwpfOsTiR_7-GVYVIpbPFyiw&s=10", features: ["High Capacity Flow", "Removes Dissolved Salts"] },
+  { id: "part-6", name: "SMPS Power Adapter", note: "Universal fit", price: "650", numericPrice: 650, category: "RO Parts & Accessories", tech: "Power", img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQIZpRH1g0snrcgq6yojwLziCK385VpvELYbWFt71NM2w&s", features: ["24V DC Output", "Over-Voltage Protection"] },
+  { id: "part-7", name: "Booster Pump", note: "For low water pressure", price: "1,200", numericPrice: 1200, category: "RO Parts & Accessories", tech: "Pump", img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR1-DXM_M-fYFJnWCbLit6N3Y0--JGTSZfD2iY820nzAw&s=10", features: ["Heavy Duty Motor", "Silent Operation"] },
+  { id: "part-8", name: "Solenoid Valve", note: "Fits most RO models", price: "350", numericPrice: 350, category: "RO Parts & Accessories", tech: "Valve", img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQlnJO43ibw1_5uGxC7UZXsViqehvf3ttdqrLznLRv8aw&s", features: ["Auto Water Cutoff", "100% Copper Coil"] },
+  { id: "part-9", name: "Float Valve", note: "Storage tank fitting", price: "180", numericPrice: 180, category: "RO Parts & Accessories", tech: "Valve", img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRa3jU-8-QD4H4sD6WMY3EKWbxRqM9lDIS-MBM0g57bOQ&s=10", features: ["Prevents Overflow", "Food Grade Plastic"] },
+  { id: "part-10", name: "UV Lamp", note: "Standard 11W", price: "450", numericPrice: 450, category: "RO Parts & Accessories", tech: "UV", img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRBu06t57LDMZGa82wjh33wDrnclXG0N9kXdcw00lPN_w&s", features: ["Kills Bacteria & Viruses", "Long Lifespan"] },
+  { id: "part-11", name: "Filter Housing (Set of 3)", note: "Universal fit", price: "600", numericPrice: 600, category: "RO Parts & Accessories", tech: "Housing", img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTaAv2CTRtoIdkDB8lv11jzJEOGiIvJ637x9Q8PYkinNw&s", features: ["Leak-proof O-ring", "Heavy Wall Thickness"] },
+  { id: "part-12", name: "Annual Filter Kit", note: "All filters, 1-year supply", price: "1,999", numericPrice: 1999, category: "RO Parts & Accessories", tech: "Kit", img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT_TcAvGNfmJ6Lk8MN5u4YDKJ9efLftL_rLORqsYZvQcQ&s=10", features: ["Complete 1-Year Pack", "Includes Spanner & Fittings"] },
+  { id: "part-13", name: "TDS Controller Valve", note: "Adjustable mineral balance", price: "420", numericPrice: 420, category: "RO Parts & Accessories", tech: "Valve", img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRs2lAdN0lxoYeipnMoBkYSsPH6LLWA4wW7x4auohhQvA&s", features: ["Brass Metering Screw", "Precise TDS Tuning"] },
+  { id: "part-14", name: "Inline Non-Return Valve", note: "Prevents backflow", price: "150", numericPrice: 150, category: "RO Parts & Accessories", tech: "Valve", img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTe8fYfeD8jcVfJnbKnDJGvpvt5QIDZYCfMQsVuqZPbhg&s=10", features: ["Push-Fit Connector", "Zero Leakage Design"] },
 ];
 
-export const allTechs = ["RO", "UV", "UF", "Copper", "Alkaline"];
-export const categories = ["All", "Domestic RO", "Commercial RO", "Kitchen Chimney"];
+export const allTechs = ["RO", "UV", "UF", "Copper", "Alkaline", "TDS Control", "Heat Auto Clean"];
+
+export const categories = [
+  "All",
+  "Domestic RO",
+  "Commercial RO",
+  "Kitchen Chimney",
+  "RO Parts & Accessories",
+];
+
+export const tankCapacities = [
+  "All",
+  "6L",
+  "8L",
+  "10L",
+  "12L",
+  "Commercial Heavy Duty",
+];
+
+export const tdsLimits = [
+  "All",
+  "Up to 1000 ppm",
+  "Up to 1500 ppm",
+  "Up to 2000 ppm",
+  "Up to 3000 ppm",
+];
+
+export const priceRanges = [
+  { label: "All Prices", min: 0, max: Infinity },
+  { label: "Under ₹2,000", min: 0, max: 2000 },
+  { label: "₹2,000 - ₹12,000", min: 2000, max: 12000 },
+  { label: "₹12,000 - ₹15,000", min: 12000, max: 15000 },
+  { label: "₹15,000 - ₹30,000", min: 15000, max: 30000 },
+  { label: "Above ₹30,000", min: 30000, max: Infinity },
+];
+
